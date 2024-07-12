@@ -54,3 +54,4 @@ You can reach Gal Elbaz through the following channels:
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 &copy; 2024 Gal Elbaz. All rights reserved.
+Made by Ben Akiva.
