@@ -42,6 +42,7 @@ h1, h2, h3 {
 
 a {
     color: var(--emerald-green);
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
@@ -52,6 +53,11 @@ a:hover {
 img {
     width: 100%;
     max-width: 45rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
 
 /* Intro Styles */
@@ -59,6 +65,7 @@ img {
     padding: 4rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
 }
 
 #intro p {
@@ -88,6 +95,7 @@ img {
     margin: 0 auto;
     padding: 3rem 1rem;
     background-color: var(--deep-sea-blue);
+    animation: slideIn 1.5s ease-in-out;
 }
 
 #contact p:last-child {
@@ -118,6 +126,7 @@ img {
 .projects-section {
     background-color: var(--midnight-blue);
     padding: 4rem 0 0;
+    animation: fadeIn 2s ease-in-out;
 }
 
 #projects {
@@ -146,6 +155,12 @@ img {
     color: var(--white);
     font-size: 1rem;
     line-height: 1.5;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.blackbox:hover {
+    background-color: var(--stormy-blue);
+    transform: translateY(-5px);
 }
 
 #projects ul {
@@ -241,12 +256,14 @@ nav li:first-child {
 nav [class*="fa-"] {
     font-size: 150%;
     color: var(--dusty-rose);
+    transition: color 0.3s ease-in-out;
 }
 
 nav a {
     color: var(--white);
     text-decoration: none;
     display: block;
+    transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
@@ -262,11 +279,13 @@ nav a:hover {
     cursor: pointer;
     font-family: var(--poppins);
     text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .button:hover {
     color: var(--white);
     background-color: var(--stormy-blue);
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -297,5 +316,28 @@ footer ul {
         flex-basis: auto;
         text-align: left;
         margin-right: auto;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
